@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" ng-app="templeScreen" ng-csp="">
+    <head>
+        <meta charset="utf-8">
+        <title>להתפאר</title>
+        <link rel="stylesheet" href="css/main.css"/>
+        <meta name="viewport" content="width=1920, user-scalable=no,initial-scale=0.2"/>
+    </head>
+    <body>
+        <aside ad-column column-properties="{'side':'right'}"></aside>
+        <section ng-controller="MainCtrl">
+            <section class="clearfix">
+                <main-title></main-title>
+                <article class="box vertical firstRow edge">
+                    <h3>זמני התפילות</h3>
+                    <days-prayers-time></days-prayers-time>
+                    <span class="icon times"></span>
+                </article>
+                <article class="box vertical firstRow banquetsBox">
+                    <h3>שהשמחה במעונם</h3>
+                    <banquet-messages></banquet-messages>
+                </article>
+                <article class="box vertical firstRow">
+                    <h3>הודעות לציבור</h3>
+                    <custom-messages></custom-messages>
+                    <span class="messages icon"></span>
+                </article>
+                <article class="box vertical firstRow edge">
+                    <h3>זמני השבת</h3>
+                    <shabbos-prayers-time></shabbos-prayers-time>
+                    <span class="icon candles"></span>
+                </article>
+                <section class="row bottomLeftEdge">
+                    <article class="box horizontal">
+                        <h3>ישאו ברכה</h3>
+                        <parnas-hayom></parnas-hayom>
+                    </article>
+                    <article class="box horizontal">
+                        <h3>שיעורי תורה</h3>
+                        <times-of-torah></times-of-torah>
+                    </article>
+                </section>
+                <article class="box horizontal wideBox">
+                    <h3>זמני ההלכה</h3>
+                    <zmanim-table></zmanim-table>
+                </article>
+                <section class="threeBox clearfix">
+                    <three-box></three-box>
+                </section>
+            </section>
+            <footer class="">
+                <bottom-row></bottom-row>
+            </footer>
+        </section>
+        <section ng-view></section>
+        <aside ad-column column-properties="{'side':'left'}"></aside>
+
+        <!-- In production use:
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+        -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
+        <script src="bower_components/jquery-cycle2/build/plugin/jquery.cycle2.carousel.min.js"></script>
+        <script src="js/slick.min.js" type="text/javascript"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/directives.js"></script>
+    </body>
+</html>

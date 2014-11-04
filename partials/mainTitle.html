@@ -1,0 +1,5 @@
+<hgroup class="mainTitle">
+    <h1 class="templeLogo"><img ng-src='{{logo}}'/></h1>
+    <h2 class="rightTitle">{{rightTitle}} {{time}}</h2>
+    <h2 class="leftTitle" ng-class="{small: leftTitleLength() > 30}"><span ng-repeat="item in leftTitle" ng-if="item">{{item}}</span></h2>
+</hgroup>

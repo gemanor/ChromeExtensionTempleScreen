@@ -1,0 +1,6 @@
+<section class="adColumnContainer">
+    <img ng-repeat="ad in ads| filter: isImage" ng-src="{{ad.imageUrl}}" ng-class="ad.type" />
+    <section ng-repeat="ad in ads| filter: isText" ng-class="ad.src.type" ng-style="{'background':ad.src.background}">
+        <article compile="ad.src.html" ng-style='{"border-style":ad.src.border}'></article>
+    </section>
+</section>

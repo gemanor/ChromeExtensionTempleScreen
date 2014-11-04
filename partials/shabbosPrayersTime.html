@@ -1,0 +1,50 @@
+<section class="shabbos">
+    <article class="timesHolder">
+        <ul class="shabbosSynagougeTimes" cycle="vertCarousel" cycle-visible="7">
+            <li class="dual" ng-repeat="time in shabbosTimes">
+                <span class="right" ng-class="{'small': (time.right_side.length >= 15), 'singleRow': (time.right_side.length < 22)}">
+                    {{time.right_side}}
+                </span>
+                <span class="left" ng-class="{'small': (time.left_side.length >= 15), 'singleRow': (time.left_side.length < 22)}">
+                    {{time.left_side}}
+                </span>
+            </li>
+        </ul>
+    </article>
+    <table class="shabbosTimes">
+        <tbody>
+            <tr>
+                <th>
+                    פרשת השבוע
+                </th>
+                <td>
+                    {{parasha}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    כניסת שבת
+                </th>
+                <td>
+                    {{candleLighting.enter}}
+                </td>
+            <tr>
+                <th>
+                    צאת שבת
+                </th>
+                <td>
+                    {{candleLighting.out}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    צאה״ש
+                    ר״ת
+                </th>
+                <td>
+                    {{candleLighting.outRT}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

@@ -1,0 +1,12 @@
+{
+    "elements": {},
+    "attributes": {
+        "compile": {
+            "context": "article"
+        },
+        "cycle": {},
+        "slick": {
+            "context": "div"
+        }
+    }
+}

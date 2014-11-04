@@ -1,0 +1,44 @@
+<table class="zmanimTable">
+    <thead>
+        <tr>
+            <th>
+                יום בשבוע
+            </th>
+            <th class="wide">תאריך</th>
+            <th>עלות השחר</th>
+            <th class="semiWide">עלה״ש 72 ד׳</th>
+            <th>זמן טו״ת</th>
+            <th>הנץ החמה</th>
+            <th class="semiWide">סזק״ש מג״א</th>
+            <th class="semiWide">סזק״ש גר״א</th>
+            <th>סז״ת מג״א</th>
+            <th>סז״ת גר״א</th>
+            <th>חצות</th>
+            <th>מנחה גדולה</th>
+            <th>מנחה קטנה</th>
+            <th>פלג המנחה</th>
+            <th>שקיעה</th>
+            <th>צאה״כ</th>
+            <th>צאה״כ ר״ת</th>
+        </tr>
+    </thead>
+    <tr ng-repeat="row in zmanimTableObj" ng-class="{activeDay : $index == 3}" class="sansSerif small">
+        <td>{{row.dayInWeek}}</td>
+        <td>{{row.date}}</td>
+        <td>{{row.alotHashacharZemaniot}}</td>
+        <td>{{row.alotHashachar72}}</td>
+        <td>{{row.talisVetfilin}}</td>
+        <td>{{row.sunrise}}</td>
+        <td>{{row.szksMGA}}</td>
+        <td>{{row.szksGRA}}</td>
+        <td>{{row.sztMGA}}</td>
+        <td>{{row.sztGRA}}</td>
+        <td>{{row.chatzot}}</td>
+        <td>{{row.minchaGedloa}}</td>
+        <td>{{row.minchaKetana}}</td>
+        <td>{{row.plagHamincha}}</td>
+        <td>{{row.sunset}}</td>
+        <td>{{row.tzaitHakochavim}}</td>
+        <td>{{row.tzaitHakochavim72}}</td>
+    </tr>
+</table>

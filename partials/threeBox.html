@@ -1,0 +1,23 @@
+<article class="box horizontal" ng-repeat="box in threeBox" ng-switch="box.boxType">
+    <h3>{{box.boxTitle}}</h3>
+    <h4 ng-switch-when="yearDay">
+        {{box.title}}
+    </h4>
+    <h4 ng-switch-default="">
+        {{box.title}}
+    </h4>
+    <p ng-switch-default="" ng-automatic-font-size="" auto-size-data="threeBox.didYouKnow.description" parent-height="90">
+        {{box.description}}
+    </p>
+    <span class="dates" ng-switch-when="yearDay">    
+        {{box.dates}}
+    </span>
+    <p  ng-switch-when="yearDay" ng-automatic-font-size="" auto-size-data="threeBox.yearDay.description" parent-height="54">{{box.description}}</p>
+    <span class="yearsAgo" ng-switch-when="todayBefore">
+        {{box.years}}
+        <span>שנה</span>
+    </span>
+    <p ng-switch-when="todayBefore" ng-automatic-font-size="" auto-size-data="threeBox.todayBefore.description">
+        {{box.description}}
+    </p>
+</article>

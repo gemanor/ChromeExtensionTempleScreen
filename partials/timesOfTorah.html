@@ -1,0 +1,14 @@
+<div class="lectures" slick="vertCarousel" cycle-visible="3">
+    <div class="lecture" ng-repeat="lecture in lectures">
+        <span class="right" ng-class="{'small': (lecture.right_side.length >= 13)}">
+            {{lecture.right_side}}
+        </span>
+        <span class="left"  ng-class="{'small': (lecture.left_side.length >= 13)}">
+            {{lecture.left_side}}
+        </span>
+        <div class="clearfix"></div>
+        <span class="center">
+            {{lecture.center}}
+        </span>
+    </div>
+</div>

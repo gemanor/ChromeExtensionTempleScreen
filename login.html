@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="templeScreen" ng-csp="">
+    <head>
+        <meta charset="utf-8">
+        <title>להתפאר</title>
+        <style>
+            body {direction: rtl;}
+            form p strong {display: inline-block;width: 120px;}
+            form p.error {color:#ff0000;font-size:1.2em;display: none;}
+        </style>
+        <meta name="viewport" content="width=1920, user-scalable=no,initial-scale=0.2"/>
+    </head>
+    <body>
+        <form id="form-login" action="http://tattoo-env-qkrjcm3ghq.elasticbeanstalk.com/admin/login_check" method="post">
+            <p class="error">
+                שגיאה בהתחברות, נסו שוב
+            </p>
+            <p>
+                <strong>שם משתמש</strong>
+                <input type="text" name="_username" required="required" placeholder="שם משתמש">
+            </p>
+            <p>
+                <strong>סיסמא</strong>
+                <input type="password" name="_password" value="" required="required" placeholder="סיסמא">
+            </p>
+            <p>
+                <input type="button" id="login-button" value="התחברות" class="btn btn-large btn-info">
+            </p>
+        </form>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="js/login.js" type="text/javascript"></script>
+    </body>
+</html>

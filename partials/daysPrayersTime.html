@@ -1,0 +1,26 @@
+<h4 class="prayerTitle first"><span>שחרית</span></h4>
+<div class="prayerList slideshow" slick="vertCarousel" cycle-visible="3">
+    <div class="row" ng-repeat="prayer in prayersTimes.shachris">
+        <span class="right" ng-class="{'small': (prayer.right_side.length >= 12), 'singleRow': (prayer.right_side.length < 18)}">{{prayer.right_side}}</span>
+        <span class="left"  ng-class="{'small': (prayer.left_side.length >= 12), 'singleRow': (prayer.left_side.length < 18)}">{{prayer.left_side}}</span>
+    </div>
+</div>
+<h4 class="prayerTitle"><span>
+        מנחה
+    </span></h4>
+<div class="prayerList" slick="vertCarousel" cycle-visible="3">
+    <div class="row" ng-repeat="prayer in prayersTimes.mincha">
+        <span class="right" ng-class="{'small': (prayer.right_side.length >= 12), 'singleRow': (prayer.right_side.length < 18)}">{{prayer.right_side}}</span>
+        <span class="left"  ng-class="{'small': (prayer.left_side.length >= 12), 'singleRow': (prayer.left_side.length < 18)}">{{prayer.left_side}}</span>
+    </div>
+</div>
+<h4 class="prayerTitle"><span>
+        מעריב
+    </span></h4>
+<div class="prayerList" slick="vertCarousel" cycle-visible="3">
+    <div class="row" ng-repeat="prayer in prayersTimes.maariv">
+        <span class="right" ng-class="{'small': (prayer.right_side.length >= 12), 'singleRow': (prayer.right_side.length < 18)}">{{prayer.right_side}}</span>
+        <span class="left"  ng-class="{'small': (prayer.left_side.length >= 12), 'singleRow': (prayer.left_side.length < 18)}">{{prayer.left_side}}</span>
+    </div>
+</div>
+

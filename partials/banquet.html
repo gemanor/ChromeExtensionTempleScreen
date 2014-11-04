@@ -1,0 +1,21 @@
+<ul class="banquets" cycle="vertCarousel" cycle-visible="5">
+    <li class="banquet" ng-repeat="banquet in banquetsList"><article class="banquetArticle">
+<!--            <span class="title" ng-small-class="singleRow" smaller-from="5" smaller-string="banquet.title.length">-->
+            <span class="title" ng-class="returnCssClass(singleRow, banquet.title.length, 5)">
+                {{banquet.title}}
+            </span>
+            <span class="right" ng-if="banquet.right_side" ng-class="{small: banquet.right_side.length >= 20}">
+                {{banquet.right_side}}
+            </span>
+            <span class="left small" ng-if="banquet.left_side" ng-class="{small: banquet.left_side.length >= 20}">
+                {{banquet.left_side}}
+            </span>
+            <span class="center" ng-if="banquet.center" ng-class="{small: banquet.center.length >= 26}">
+                {{banquet.center}}
+            </span>
+            <span class="bottomRow">
+                {{banquet.bottom_row}}
+            </span>
+        </article>
+    </li>
+</ul>

@@ -1,0 +1,773 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 30, 2014, 9:05:24 PM
+    Author     : gmanor
+*/
+@font-face {
+  font-family: 'Frank';
+  src: url('../fonts/frankruehlclm-medium-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frank';
+  src: url('../fonts/frankruehlclm-bold-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Frank';
+  src: url('../fonts/frankruehlclm-mediumoblique-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Frank';
+  src: url('../fonts/frankruehlclm-boldoblique-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto';
+  src: url('../fonts/NotoSansHebrew-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto';
+  src: url('../fonts/NotoSansHebrew-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto';
+  src: url('../fonts/NotoSansHebrew-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Stam';
+  src: url('../fonts/stamashkenazclm-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alef';
+  src: url('../fonts/Alef-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alef';
+  src: url('../fonts/Alef-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+html,
+body {
+  border: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+html .sansSerif,
+body .sansSerif {
+  font-family: sans-serif;
+}
+html .sansSerif.small,
+body .sansSerif.small {
+  font-size: 8px;
+}
+h2,
+h3,
+h4 {
+  font-family: 'Alef';
+  font-weight: normal;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+html {
+  height: 1080px;
+  width: 1920px;
+}
+body {
+  direction: rtl;
+  width: 1920px;
+  height: 1080px;
+  margin: 0;
+}
+body * {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -mox-box-sizing: border-box;
+}
+body > aside,
+body > section {
+  float: right;
+}
+body:before {
+  content: '';
+  width: 1920px;
+  height: 1080px;
+  background: url(../img/mainBg.png) center center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+body hgroup.mainTitle {
+  color: #2d0126;
+  position: relative;
+  background: url(../img/mainTitle.png) no-repeat left 62px;
+}
+body hgroup.mainTitle h1 {
+  height: 207px;
+  width: 680px;
+  padding: 50px 96px;
+  text-align: center;
+  background: url(../img/titleBg.png);
+  margin: 0 auto;
+}
+body hgroup.mainTitle h2 {
+  position: absolute;
+  font-size: 1em;
+  top: 94px;
+  right: 42px;
+  width: 238px;
+  text-align: center;
+}
+body hgroup.mainTitle h2.leftTitle {
+  left: 42px;
+  right: auto;
+}
+body hgroup.mainTitle h2.leftTitle.small {
+  font-size: 0.8em;
+  line-height: 2;
+}
+body hgroup.mainTitle h2 > span:not(:first-child):before {
+  content: "|";
+  display: inline-block;
+  padding: 0 4px;
+}
+body .adColumnContainer {
+  padding: 10px;
+  width: 324px;
+}
+body .adColumnContainer > .fullImage,
+body .adColumnContainer .halfImage,
+body .adColumnContainer .duplicatedImage {
+  height: 202px;
+  width: 304px;
+  display: block;
+  margin: 0 0 10px;
+  position: relative;
+}
+body .adColumnContainer > .fullImage:last-child,
+body .adColumnContainer .halfImage:last-child,
+body .adColumnContainer .duplicatedImage:last-child {
+  margin-bottom: 0;
+}
+body .adColumnContainer > .fullImage article,
+body .adColumnContainer .halfImage article,
+body .adColumnContainer .duplicatedImage article {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  border-width: 4px;
+  padding: 10px;
+}
+body .adColumnContainer > .halfImage {
+  width: 150px;
+  display: inline-block;
+}
+body .adColumnContainer > .duplicatedImage {
+  height: 414px;
+}
+body > section {
+  width: 1272px;
+  padding: 0 40px;
+}
+body > section footer {
+  height: 50px;
+  width: 1192px;
+  padding: 10px;
+  font-size: 0.8em;
+  background: url(../img/footerBg.png);
+  line-height: 30px;
+  text-align: center;
+}
+body > section > section > .row {
+  float: right;
+}
+body > section > section > .row .box {
+  float: none;
+  height: 200px;
+}
+body > section > section > .row .box:last-child {
+  margin-bottom: 10px;
+}
+body > section .threeBox .box {
+  height: 172px;
+  margin-bottom: 10px;
+}
+body > section .threeBox .box p {
+  padding: 4px 0;
+  line-height: 1.2em;
+  font-size: 24px;
+}
+body > section .threeBox .box h4 {
+  font-size: 1.4em;
+}
+body > section .threeBox .box .yearsAgo {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  float: right;
+  padding-left: 20px;
+  width: 90px;
+  margin-top: -6px;
+}
+body > section .threeBox .box .yearsAgo span {
+  font-size: 0.5em;
+  display: block;
+}
+body > section .box {
+  height: 300px;
+  width: 278px;
+  background: #dbc490;
+  border-radius: 10px;
+  float: right;
+  z-index: 1;
+  position: relative;
+  margin: 0px 10px 38px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5), inset 2px 2px 5px rgba(255, 255, 255, 0.6), inset -2px -2px 5px rgba(0, 0, 0, 0.6);
+}
+body > section .box:before,
+body > section .box:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+body > section .box > h3 {
+  text-align: center;
+  background: url(../img/smallTitleBg.png);
+  position: absolute;
+  width: 192px;
+  height: 60px;
+  background-size: 100% 100%;
+  top: -28px;
+  left: 50%;
+  margin-left: -96px;
+  font-size: 1.4em;
+  line-height: 60px;
+}
+body > section .box.firstRow {
+  margin-top: 36px;
+}
+body > section .box.firstRow.edge {
+  margin-top: -24px;
+  height: 360px;
+}
+body > section .box.wideBox {
+  width: 874px;
+  height: 228px;
+}
+body > section .box.horizontal {
+  padding: 36px 20px 20px;
+}
+body > section .box.vertical {
+  padding: 36px 34px 20px;
+}
+body > section .box.banquetsBox {
+  padding-bottom: 14px;
+}
+body > section .box.vertical:before {
+  top: 6px;
+  right: 10px;
+  background: url(../img/rightVerticalDecoration.png);
+}
+body > section .box.vertical:after {
+  top: 6px;
+  left: 10px;
+  background: url(../img/leftVerticalDecoration.png);
+}
+body > section .box.horizontal:before {
+  top: 8px;
+  right: 10px;
+  background: url(../img/rightHorizontalDecoration.png);
+}
+body > section .box.horizontal:after {
+  top: 8px;
+  left: 10px;
+  background: url(../img/leftHorizontalDecoration.png);
+}
+body > section .box.vertical:before,
+body > section .box.vertical:after {
+  height: 252px;
+  width: 22px;
+}
+body > section .box.horizontal:before,
+body > section .box.horizontal:after {
+  width: 252px;
+  height: 22px;
+}
+body > section .box .icon {
+  display: block;
+  position: absolute;
+}
+body > section .box .icon.times {
+  background: url(../img/timesIcon.png);
+  height: 118px;
+  width: 90px;
+  right: 3px;
+  bottom: -20px;
+  opacity: 0.25;
+  z-index: 1000000;
+}
+body > section .box .icon.messages {
+  background: url(../img/messagesIcon.png);
+  width: 58px;
+  height: 134px;
+  bottom: 10px;
+  right: 10px;
+  z-index: -1;
+  opacity: 0.6;
+}
+body > section .box .icon.candles {
+  background: url(../img/candles.png);
+  width: 49px;
+  height: 106px;
+  bottom: 10px;
+  left: 10px;
+}
+body > section h4.prayerTitle {
+  font-size: 1.3em;
+  text-align: center;
+  padding: 10px 0 0;
+}
+body > section h4.prayerTitle.first {
+  padding: 0;
+}
+body > section h4.prayerTitle span {
+  display: inline-block;
+  border-bottom: 4px double #2d0126;
+  padding: 0px 10px;
+}
+body > section table.zmanimTable {
+  font-size: 0.8em;
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 834px;
+  line-height: 1.5;
+}
+body > section table.zmanimTable tr.activeDay {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+body > section table.zmanimTable th,
+body > section table.zmanimTable td {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  padding: 4px 0;
+  overflow: hidden;
+  width: 48px;
+}
+body > section table.zmanimTable th {
+  background: rgba(45, 1, 38, 0.5);
+  color: #fff;
+  vertical-align: top;
+  padding: 4px 1px;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+body > section table.zmanimTable th.wide {
+  width: 56px;
+  padding: 4px 2px;
+}
+body > section table.zmanimTable th.semiWide {
+  width: 52px;
+}
+body > section div.prayerList {
+  height: 78px;
+  overflow: hidden;
+  margin-top: -4px;
+  /*                                div.cycle-carousel-wrap {width:100%;}*/
+}
+body > section div.prayerList div.row {
+  position: relative !important;
+  padding: 4px 0;
+  height: 26px;
+  width: 100%;
+}
+body > section div.prayerList div.row:before {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  border-bottom: 1px dotted #2d0126;
+  z-index: -1;
+}
+body > section div.prayerList div.row span {
+  display: inline-block;
+  max-width: 102px;
+  line-height: 22px;
+  padding-left: 10px;
+  background: #dbc490;
+  height: 100%;
+}
+body > section div.prayerList div.row span.left {
+  text-align: left;
+  padding: 0 10px 0 0;
+  float: left;
+}
+body > section div.prayerList div.row span.small {
+  font-size: 0.8em;
+  line-height: 1;
+}
+body > section div.prayerList div.row span.small.singleRow {
+  line-height: 22px;
+}
+body > section div.prayerList div.row ~ .small {
+  display: none;
+}
+body > section article.timesHolder {
+  height: 210px;
+  font-size: 1.2em;
+}
+body > section article.timesHolder:before {
+  height: 100%;
+  display: inline-block;
+  width: 0px;
+  margin-left: -4px;
+  content: '';
+  vertical-align: middle;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes div.cycle-carousel-wrap {
+  width: 100%;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes li {
+  position: relative !important;
+  padding: 4px 0;
+  height: 30px;
+  width: 100%;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes li:before {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  border-bottom: 1px dotted #2d0126;
+  z-index: -1;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes li span {
+  display: inline-block;
+  max-width: 102px;
+  line-height: 28px;
+  padding-left: 10px;
+  background: #dbc490;
+  height: 100%;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes li span.left {
+  text-align: left;
+  padding: 0 10px 0 0;
+  float: left;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes li span.small {
+  font-size: 0.8em;
+  line-height: 1;
+}
+body > section article.timesHolder ul.shabbosSynagougeTimes li span.small.singleRow {
+  line-height: 28px;
+}
+body > section .customMessages {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  direction: ltr;
+}
+body > section .customMessages .message {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+  direction: rtl;
+}
+body > section .lectures {
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+body > section .lectures div.lecture {
+  height: 48px;
+  padding: 6px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+body > section .lectures div.lecture span {
+  display: inline-block;
+  width: 102px;
+  height: 18px;
+  line-height: 14px;
+}
+body > section .lectures div.lecture span.small {
+  font-size: 0.8em;
+  line-height: 1;
+}
+body > section .lectures div.lecture span.right {
+  float: right;
+  padding-left: 10px;
+}
+body > section .lectures div.lecture span.left {
+  float: left;
+  padding-right: 10px;
+  text-align: left;
+}
+body > section .lectures div.lecture span.center {
+  display: block;
+  padding-top: 4px;
+  text-align: center;
+  line-height: 1;
+  width: 100%;
+}
+body > section .contributorsSlideShow {
+  overflow: hidden;
+  direction: ltr;
+}
+body > section .contributorsSlideShow .contributorSlide {
+  width: 100%;
+  float: left;
+  direction: rtl;
+}
+body > section .shabbos table.shabbosTimes {
+  table-layout: fixed;
+  width: 180px;
+  position: absolute;
+  bottom: 24px;
+  right: 26px;
+  font-size: 1em;
+  line-height: 1.3em;
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+}
+body > section .shabbos table.shabbosTimes th {
+  width: 90px;
+  text-align: right;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  padding-right: 8px;
+}
+body > section .shabbos table.shabbosTimes td {
+  text-align: center;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+body > section .banquets {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+body > section .banquets .banquet {
+  height: 50px;
+  padding: 2px 3px;
+}
+body > section .banquets .banquet .banquetArticle {
+  position: relative !important;
+  height: 45px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  padding-right: 30px;
+}
+body > section .banquets .banquet .banquetArticle .title {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  height: 26px;
+  padding: 0px 2px;
+  line-height: 1em;
+  right: -10px;
+  top: 9px;
+  width: 45px;
+  -webkit-transform: rotate(-90deg);
+  text-align: center;
+}
+body > section .banquets .banquet .banquetArticle .title.singleRow:before {
+  height: 100%;
+  display: inline-block;
+  width: 0px;
+  margin-left: -4px;
+  content: '';
+  vertical-align: middle;
+}
+body > section .banquets .banquet .banquetArticle .right,
+body > section .banquets .banquet .banquetArticle .left {
+  display: block;
+  font-size: 0.8em;
+  width: 74px;
+  padding-top: 2px;
+  height: 23px;
+}
+body > section .banquets .banquet .banquetArticle .right.small,
+body > section .banquets .banquet .banquetArticle .left.small {
+  font-size: 0.7em;
+}
+body > section .banquets .banquet .banquetArticle .right {
+  float: right;
+}
+body > section .banquets .banquet .banquetArticle .left {
+  float: left;
+  padding-left: 2px;
+  text-align: left;
+}
+body > section .banquets .banquet .banquetArticle .center {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  text-align: center;
+  height: 23px;
+}
+body > section .banquets .banquet .banquetArticle .center:nth-child(2) {
+  width: 100%;
+  line-height: 2em;
+}
+body > section .banquets .banquet .banquetArticle .center:nth-child(2).small {
+  font-size: 0.8em;
+  line-height: 1em;
+  padding-top: 3px;
+}
+body > section .banquets .banquet .banquetArticle .bottomRow {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 1;
+}
