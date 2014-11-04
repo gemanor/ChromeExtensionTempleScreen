@@ -5,5 +5,5 @@ A Chrome App of kiosk to use by Synagogues to display Times of the day, Ads, Pos
 
 This app shown at 46" screens in FullHD resolution
 
-A ScreenShot
-![alt tag](https://raw.github.com/gemanor/ChromeExtensionTempleScreen/screen.jpg)
+Take a loog at the screen shot
+![ScreenShot](https://raw.githubusercontent.com/gemanor/ChromeExtensionTempleScreen/master/screen.jpg)
